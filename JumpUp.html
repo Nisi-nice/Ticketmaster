@@ -27,58 +27,58 @@
                     </label><br><br>
                     <label for="evento" >Evento o artista:</label>
                     <select name="evento" id="evento" >Evento
-                        <option value="IM">The Imagination Movers</option>
-                        <option value="ES">Tributo a Encias sangrantes Murphy</option>
-                        <option value="GC">Ghost Cats</option>
-                        <option value="C">Carmen</option>
-                      <option value="HW">Monologo Huggy wuggy por Alexander</option>
+                        <option value="The Imagination Movers">The Imagination Movers</option>
+                        <option value="Tributo a Encias sangrantes Murphy">Tributo a Encias sangrantes Murphy</option>
+                        <option value="Ghost Cats">Ghost Cats</option>
+                      <option value="Monologo Huggy wuggy por Alexander">Monologo Huggy wuggy por Alexander</option>
                     </select><br><br>
                     <label>Unidades:
-                        <input  type="number" name="unidades" maxlength="10" placeholder="max = 10" />
+                        <input  type="number" name="unidades" max=10 min="1" />
                     </label><br><br>
                     <label for="zona" >Zona del teatro:</label>
                     <select name="zona" id="zona">Zona
                         <optgroup label="Lunetas">
-                            <option value="LunetaA">Luneta A</option>
-                            <option value="LunetaB">Luneta B</option>
-                           <option value="LunetaC">Luneta C</option>
+                            <option value="Luneta A">Luneta A</option>
+                            <option value="Luneta B">Luneta B</option>
+                           <option value="Luneta C">Luneta C</option>
                         </optgroup>
                         <optgroup label="Palcos">                        
-                            <option value="pai">Palco izquierdo A</option>
-                            <option value="pbi">Palco izquierdo B</option>
-                            <option value="pad">Palco dereco A</option>
-                            <option value="pbd">Palco derecho B</option>        
+                            <option value="Palco izquierdo A">Palco izquierdo A</option>
+                            <option value="Palco izquierdo B">Palco izquierdo B</option>
+                            <option value="Palco dereco A">Palco dereco A</option>
+                            <option value="Palco derecho B">Palco derecho B</option>    
+                        </optgroup>    
                         <optgroup label="Balcones">
-                            <option value="ba">Balcon A</option>
-                            <option value="bb">Balcon B</option>
+                            <option value="Balcon A">Balcon A</option>
+                            <option value="Balcon B">Balcon B</option>
                         </optgroup>
                     </select><br><br>
-                    <label for="checkbox" >Lugar:</label><br>
-                    <input type="checkbox" name="lug" checked value="metrop">
+                    <label for="lug" >Lugar:</label><br>
+                    <input type="radio" name="lug" checked value="Teatro metropolitan">
                         Teatro metropolitan<br>
-                    <input type="checkbox" name="lug" value="auditorio telmex">
+                    <input type="radio" name="lug" value="auditorio telmex">
                         Auditorio telmex<br>
-                    <input type="checkbox" name="lug" value="deportes">
+                    <input type="radio" name="lug" value="Palacio de los deportes">
                         Palacio de los deportes<br>
-                    <input type="checkbox" name="lug" value="Auditorio Nacional">
+                    <input type="radio" name="lug" value="Auditorio Nacional">
                         Auditorio Nacional<br>
                     </label><br><br>
                     <label for="extras" >Extras:</label><br>
-                    <input type="radio" name="extras" checked value="comida">
+                    <input type="checkbox" name="extras" checked value="Paquete de comida">
                         Paquete de comida<br>
-                    <input type="radio" name="extras" value="Estacionamiento">
+                    <input type="checkbox" name="extras" value="Estacionamiento">
                        Estacionamiento<br>
-                    <input type="radio" name="extras" value="vip">
+                    <input type="checkbox" name="extras" value="Pase VIP">
                         Pase VIP<br>
-                    <input type="radio" name="extras" value="back">
+                    <input type="checkbox" name="extras" value="Pase Backstage">
                         Pase Backstage<br>
                     </label><br><br>
                     </select><br><br>
+                    <input type="reset" value="Borrar">
+                    <input type="submit" value="Enviar">
                 </fieldset> 
    </form>                      
 
 </body>
 </html>
 
-</body>
-</html>
