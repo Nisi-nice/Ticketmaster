@@ -5,8 +5,27 @@ $nombre=(isset($_POST["nombre"]) && $_POST["nombre"] !="")? $_POST["nombre"] : "
  $evento=(isset($_POST["evento"]) && $_POST["evento"] !="")? $_POST["evento"] : false;
  $unidades=(isset($_POST["unidades"]) && $_POST["unidades"] !="")? $_POST["unidades"] : 0;
  $zona=(isset($_POST["zona"]) && $_POST["zona"] !="")? $_POST["zona"] : false;
- $lugar=(isset($_POST["lug"]) && $_POST["lug"] !="")? $_POST["lug"] : "Sin llenar";
+ $lugar=(isset($_POST["lug"]) && $_POST["lug"] !="")? $_POST["lug"] : false;
  $extras=(isset($_POST["extras"]) && $_POST["extras"] !="")? $_POST["extras"] : "Ninguno";
+ $frase;
+ if ($evento=="The Imagination Movers") {
+     $frase='Vamos a gritar "Que estupenda idea"';
+ } else {
+     if ($evento=="Tributo a Encias sangrantes Murphy") {
+         $frase='El blues no es para que me sienta mejor, es para hacer que otros se sientan peor';
+     } else {
+         if ($evento=="Ghost Cats") {
+             $frase='Metro pantitlan, me van a asaltar';
+         } else {
+             if ($evento=="Monologo Huggy wuggy por Alexander") {
+                 $frase='<a href="https://youtu.be/DJstkHek4BI"> el rap de huggy wuggy</a>';
+             }
+             
+         }
+         
+     }
+     
+ }
  $imagen;
 if ($evento=="The Imagination Movers") {
     $imagen='..\statics\imovers.jpg';
@@ -28,7 +47,7 @@ if ($evento=="The Imagination Movers") {
 }
 $ilugar;
 if ($lugar=="Teatro metropolitan") {
-    $ilugar='..\statics\imovers.jpg';
+    $ilugar='..\statics\metropolitan.jpg';
 } else {
     if ($lugar=="auditorio telmex") {
         $ilugar='..\statics\telmex.jpg';
@@ -90,9 +109,7 @@ if ($zona=="Luneta A") {
      
 }
 $i=0;
-for ($i==1; $i==$unidades; $i++) { 
-    echo "o";
-}
+for ($i=0; $i<=$unidades-1; $i++) { 
         echo "
             <!DOCTYPE html>
             <html lang='en'>
@@ -100,8 +117,10 @@ for ($i==1; $i==$unidades; $i++) {
             <meta charset='UTF-8'>
             <meta http-equiv='X-UA-Compatible' content='IE=edge'>
             <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-            <title>Document</title>
-                <table border='2' style='border-collapse:collapse;' cellpadding='40px'>
+            <title>ticketmasteruwu</title>
+            <link rel='icon' href='http://1.bp.blogspot.com/-zbjF2mKA1zw/VWU0DJDe8rI/AAAAAAAABXY/j2c8P2FiCAM/s1600/_150526-imagenes-gatitos-fotografia-gato-minino-imajen-imajen-felino-foto-gata.jpg' type='image/jpg'
+            <body>   
+            <table border='3' style='border-collapse:collapse;' cellpadding='40px'>
                     <thead>
                         <td colspan='5'>
                              <strong>Boleto para $evento</strong>
@@ -143,11 +162,12 @@ for ($i==1; $i==$unidades; $i++) {
                             </td>
                         </tr>
                         <tr>
-                            <td colspan='4'> eeee puto</td>
+                            <td colspan='4'> $frase</td>
                         </tr>
-                </table>  
+                </table> 
+                <br> 
             </body>
             </html>
         ";
-
+}
 ?>
